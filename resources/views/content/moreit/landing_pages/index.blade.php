@@ -40,7 +40,9 @@
                         <td>{{ $page->nom_page }}</td>
                         <td>{{ $page->cadeau_nom }}</td>
                         <td>{{ ucfirst($page->type) }}</td>
-                        <td><a href="{{ url($page->cadeau_path) }}" target="_blank">Voir</a></td>
+                        <td>
+                            <a href="https://gift.more-it-cs.com/{{ $page->nom_page }}" target="_blank">{{ $page->nom_page }}</a>
+                        </td>
                         <td>{{ $page->total_prospects }}</td>
                         <td>
                             <a href="#" class="btn btn-sm btn-primary">Modifier</a>

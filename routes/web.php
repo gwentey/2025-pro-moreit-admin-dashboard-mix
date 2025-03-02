@@ -113,4 +113,4 @@ Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic')
 
 // pages added 
 Route::get('/mes-landing-pages', [LandingPageController::class, 'index'])->name('landing-pages');
-Route::get('/mes-prospects', [ProspectController::class, 'index'])->name('prospects.index');
+Route::get('/mes-prospects', [ProspectController::class, 'index'])->name('mes-prospects');

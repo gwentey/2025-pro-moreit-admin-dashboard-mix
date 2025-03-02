@@ -31,12 +31,6 @@ return new class extends Migration {
             $table->foreign('landingpage_id')->references('id')->on('landingpage')->onDelete('cascade');
         });
 
-        // Table linkedin
-        Schema::create('linkedin', function (Blueprint $table) {
-            $table->id();
-            $table->string('id_linkedin', 19);
-        });
-
         // Vue SQL
         DB::statement("
             CREATE OR REPLACE VIEW v_landingpage_prospect AS
@@ -58,7 +52,6 @@ return new class extends Migration {
     public function down()
     {
         Schema::dropIfExists('v_landingpage_prospect');
-        Schema::dropIfExists('linkedin');
         Schema::dropIfExists('prospect');
         Schema::dropIfExists('landingpage');
     }

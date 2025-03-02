@@ -26,17 +26,6 @@
       "name": "Mes Prospects",
       "url": "/mes-prospects",
       "slug": "mes-prospects"
-    },
-    {
-      "url": "https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/email",
-      "name": "Email",
-      "icon": "menu-icon tf-icons bx bx-envelope",
-      "slug": "app-email",
-      "target": "_blank",
-      "badge": [
-        "label-primary fs-tiny",
-        "Pro"
-      ]
     }
   ]
 }

@@ -27,6 +27,11 @@
 ```bash
 yarn 
 ```
+ recompiler
+```bash
+npm run build
+```
+
 
 3. Run the following command to generate the key
 
@@ -61,6 +66,11 @@ php artisan cache:clear
 php artisan config:clear
 php artisan route:clear
 php artisan view:clear
+```
+3. Base de donné migration
+
+```bash
+php artisan migrate --force
 ```
 
 ```bash

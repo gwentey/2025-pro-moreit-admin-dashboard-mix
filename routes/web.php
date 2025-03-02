@@ -44,8 +44,11 @@ use App\Http\Controllers\form_layouts\VerticalForm;
 use App\Http\Controllers\form_layouts\HorizontalForm;
 use App\Http\Controllers\tables\Basic as TablesBasic;
 
+use App\Http\Controllers\moreit\LandingPageController;
+use App\Http\Controllers\moreit\ProspectController;
+
 // Main Page Route
-Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
+Route::get('/', [Analytics::class, 'index'])->name('dashboard');
 
 // layout
 Route::get('/layouts/without-menu', [WithoutMenu::class, 'index'])->name('layouts-without-menu');
@@ -107,3 +110,7 @@ Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('
 
 // tables
 Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic');
+
+// pages added 
+Route::get('/mes-landing-pages', [LandingPageController::class, 'index'])->name('landing-pages');
+Route::get('/mes-prospects', [ProspectController::class, 'index'])->name('prospects.index');

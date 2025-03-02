@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Forcer Apache à charger /public/index.php par défaut
+    DirectoryIndex public/index.php
+
+    # Vérifie si la requête est déjà dans /public/ pour éviter les boucles
+    RewriteCond %{REQUEST_URI} !^/public/
+    
+    # Si le fichier ou le dossier demandé n'existe pas, rediriger vers /public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
